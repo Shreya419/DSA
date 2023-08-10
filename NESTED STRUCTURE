@@ -1,0 +1,47 @@
+#include<stdio.h>
+struct school {
+    char schoolname[50];
+    int Noofstudents;
+    int Noofteachers;
+    struct student{
+        char studentname[50];
+        int StudentID;
+        float marks;
+    };
+};
+
+int main(){
+    struct school s;
+    //storing information
+    printf("Enter the school name: \n");
+    scanf("%s", s.schoolname);
+    
+    printf("Enter the no of students: \n");
+    scanf("%d", &s.Noofstudents);
+    
+    printf("Enter the no of teachers: \n");
+    scanf("%d", &s.Noofteachers);
+    
+    struct student st;
+    printf("Enter the details of students: \n");
+    
+    //storing information
+    printf("Enter the student name: \n");
+    scanf("%s", st.studentname);
+    
+    printf("Enter the student roll no.: \n");
+    scanf("%d", &st.StudentID);
+    
+    printf("Enter the student marks: \n");
+    scanf("%f", &st.marks);
+    
+    //displaying information
+    printf("School name: %s\n", s.schoolname);
+    printf("No. of students in school: %d\n", s.Noofstudents);
+    printf("No. of teachers in school: %d\n", s.Noofteachers);
+    printf("Name: %s\n", st.studentname);
+    printf("Roll no,: %d\n", st.StudentID);
+    printf("Marks: %.2f\n", st.marks);
+    
+    return 0;
+}
